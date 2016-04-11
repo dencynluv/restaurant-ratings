@@ -19,4 +19,6 @@ for line in scores:
     line = line.split(":")
     # print line
     restaurant_ratings[line[0]] = line[1]
-print restaurant_ratings
+# print restaurant_ratings
+
+print sorted(restaurant_ratings.items())
