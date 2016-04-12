@@ -21,4 +21,7 @@ for line in scores:
     restaurant_ratings[line[0]] = line[1]
 # print restaurant_ratings
 
-print sorted(restaurant_ratings.items())
+# alpha_ratings = sorted(restaurant_ratings.items())
+
+for restaurant in sorted(restaurant_ratings):
+    print "{} is rated at {}.".format(restaurant_ratings[restaurant], restaurant)
