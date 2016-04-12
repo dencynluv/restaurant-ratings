@@ -18,10 +18,14 @@ for line in scores:
     line = line.rstrip()
     line = line.split(":")
     # print line
-    restaurant_ratings[line[0]] = line[1]
+    # restaurant_ratings[line[0]] = line[1] same as below
+    restaurant_name = line[0]
+    restaurant_rating = line[1]
+    # restaurant_name, restaurant_rating = line     *same as above by unpacking
+    restaurant_ratings[restaurant_name] = restaurant_rating
 # print restaurant_ratings
 
-# alpha_ratings = sorted(restaurant_ratings.items())
+# alpha_ratings = sorted(restaurant_ratings.items()) same as below
 
 for restaurant in sorted(restaurant_ratings):
-    print "{} is rated at {}.".format(restaurant_ratings[restaurant], restaurant)
+    print "{} is rated at {}.".format(restaurant, restaurant_ratings[restaurant])
